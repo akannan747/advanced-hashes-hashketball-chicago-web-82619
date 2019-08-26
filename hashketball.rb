@@ -50,10 +50,11 @@ def get_players
 end
 
 def get_player(player_name)
-  p get_players
-  get_players.find { |player|
+  get_players
+  v = get_players.find { |player|
     player[:player_name] == player_name
   }
+  p v
 end
 
 def num_points_scored(player_name)
