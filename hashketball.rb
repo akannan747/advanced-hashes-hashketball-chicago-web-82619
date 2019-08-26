@@ -49,10 +49,14 @@ def get_players
   }.flatten
 end
 
-def num_points_scored(player_name)
+def get_player(player_name)
   get_players.find { |player|
-    player[:player_name] == player_name
-  }[:points]
+    player{:player_name] == player_name
+  }
+end
+
+def num_points_scored(player_name)
+  get_player(player_name)[:points]
 end
 
 
