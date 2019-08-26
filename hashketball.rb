@@ -43,6 +43,23 @@ def good_practices
   end
 end
 
+def get_players
+  game_hash.values.map { |team|
+    team[:players]
+  }.flatten
+end
+
+def num_points_scored(player_name)
+  get_players.find { |player|
+    player[:player_name] == player_name
+  }[:points]
+end
+
+
+
+
+
+--begin
 # Helper method.
 def stat_leader(stat) 
   goliath = ''
@@ -62,7 +79,7 @@ end
 def num_points_scored(player_name)
   player_stats(player_name)[:points]
 end
-
+-- end
 #2
 def shoe_size(player_name)
   player_stats(player_name)[:shoe]
