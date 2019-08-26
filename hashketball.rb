@@ -44,13 +44,13 @@ def good_practices
 end
 
 def get_players
-  val = game_hash.values.map { |team|
+  game_hash.values.map { |team|
     team[:players]
   }.flatten
-  p val
 end
 
 def get_player(player_name)
+  p get_players
   get_players.find { |player|
     player[:player_name] == player_name
   }
