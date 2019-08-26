@@ -52,7 +52,7 @@ end
 def get_player(player_name)
   get_players
   v = get_players.find { |player|
-    p player
+    p player[:player_name]
     player[:player_name] == player_name
   }
 end
